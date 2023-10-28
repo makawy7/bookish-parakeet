@@ -10,7 +10,6 @@
 @yield('css')
 
 <!--- Style css -->
-@dump(session()->get('abdallah'))
 @if (App::getLocale() == 'en')
     <link href="{{ URL::asset('assets/css/ltr.css') }}" rel="stylesheet">
 @else
