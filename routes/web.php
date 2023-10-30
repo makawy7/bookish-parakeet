@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GradeController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
@@ -24,5 +25,6 @@ Route::group(
         Route::get('/', function () {
             return view('dashboard');
         });
+        Route::resource('/grades', GradeController::class)->only('index', 'create');
     }
 );
