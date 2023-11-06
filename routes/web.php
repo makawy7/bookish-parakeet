@@ -25,6 +25,6 @@ Route::group(
         Route::get('/', function () {
             return view('dashboard');
         });
-        Route::resource('/grades', GradeController::class)->only('index', 'create');
+        Route::resource('/grades', GradeController::class)->except('edit');
     }
 );
