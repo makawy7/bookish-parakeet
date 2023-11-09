@@ -12,4 +12,9 @@ class Grade extends Model
     protected $guarded = ['id'];
 
     public $translatable = ['name'];
+
+    public function classrooms()
+    {
+        return $this->hasMany(Classroom::class);
+    }
 }

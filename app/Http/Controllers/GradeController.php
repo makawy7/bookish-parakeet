@@ -20,11 +20,17 @@ class GradeController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, [
+        $request->validate([
             "name_ar" => "required",
             "name_en" => "required",
             "notes" => "sometimes",
         ]);
+
+        // validate that name has not been taken (arabic or english)
+        if (Grade::where("name->ar", $request->name_ar)->orWhere("name->en", $request->name_en)->exists()) {
+            return back()->withErrors("Grade name has already been taken");
+        }
+
         $grade = new Grade;
         $grade->setTranslation("name", "en", $request->name_en);
         $grade->setTranslation("name", "ar", $request->name_ar);
@@ -38,11 +44,16 @@ class GradeController extends Controller
 
     public function update(Request $request, Grade $grade)
     {
-        $this->validate($request, [
+        $request->validate([
             "name_ar" => "required",
             "name_en" => "required",
             "notes" => "sometimes",
         ]);
+
+        // validate that name has not been taken (arabic or english)
+        if (Grade::where("name->ar", $request->name_ar)->orWhere("name->en", $request->name_en)->exists()) {
+            return back()->withErrors("Grade name has already been taken");
+        }
 
         $grade->setTranslation("name", "en", $request->name_en);
         $grade->setTranslation("name", "ar", $request->name_ar);

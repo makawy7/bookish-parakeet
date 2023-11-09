@@ -4,10 +4,12 @@
 return [
     "dashboard" => "لوحة التحكم",
     "actions" => [
-        "submit" => "Submit",
-        "cancel" => "Cancel",
-        "edit" => "Edit",
-        "delete" => "Delete",
+        "submit" => "حفظ",
+        "cancel" => "الغاء",
+        "edit" => "تعديل",
+        "delete" => "حذف",
+        "actions" => "العمليات",
+        "addmore" => "اضافة المزيد",
     ],
     "grades" => [
         "title" => "المراحلة التعليمية",
@@ -19,5 +21,16 @@ return [
         "actions" => "Actions",
         "name_ar" => "Grade Name In Arabic",
         "name_en" => "Grade Name In English",
+    ],
+    "classrooms" => [
+        "title" => "الصفوف الدراسية",
+        "list" => "عرض الصفوف الدراسية",
+        "create" => "اضافة صف دراسي جديد",
+        "add_new_classroom" => "اضافة صف دراسي جديد",
+        "name" => "اسم الصف الدراسي",
+        "grade" => "المرحلة التعليمية",
+        "actions" => "العمليات",
+        "name_ar" => "اسم الصف الدراسي بالعربية",
+        "name_en" => "اسم الصف الدراسي بالانجليزية",
     ],
 ];

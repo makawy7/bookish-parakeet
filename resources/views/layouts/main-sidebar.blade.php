@@ -7,7 +7,8 @@
                     <!-- menu item Dashboard-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard">
-                            <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">{{__('admin.dashboard')}}</span>
+                            <div class="pull-left"><i class="ti-home"></i><span
+                                    class="right-nav-text">{{ __('admin.dashboard') }}</span>
                             </div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -24,28 +25,26 @@
                     <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Components </li>
                     <!-- menu item Elements-->
                     <li>
-                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#grades">
                             <div class="pull-left"><i class="ti-palette"></i><span
-                                    class="right-nav-text">{{__('admin.grades.title')}}</span></div>
+                                    class="right-nav-text">{{ __('admin.grades.title') }}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
-                        <ul id="elements" class="collapse" data-parent="#sidebarnav">
-                            <li><a href="{{route('grades.index')}}">{{__('admin.grades.list')}}</a></li>
-                            <li><a href="{{route('grades.create')}}">{{__('admin.grades.create')}}</a></li>
+                        <ul id="grades" class="collapse" data-parent="#sidebarnav">
+                            <li><a href="{{ route('grades.index') }}">{{ __('admin.grades.list') }}</a></li>
                         </ul>
                     </li>
-                    <!-- menu item calendar-->
+                    <!-- menu item classrooms-->
                     <li>
-                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#calendar-menu">
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#classrooms-menu">
                             <div class="pull-left"><i class="ti-calendar"></i><span
-                                    class="right-nav-text">calendar</span></div>
+                                    class="right-nav-text">{{ __('admin.classrooms.title') }}</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
-                        <ul id="calendar-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="calendar.html">Events Calendar </a> </li>
-                            <li> <a href="calendar-list.html">List Calendar</a> </li>
+                        <ul id="classrooms-menu" class="collapse" data-parent="#sidebarnav">
+                            <li><a href="{{ route('classrooms.index') }}">{{ __('admin.classrooms.list') }}</a></li>
                         </ul>
                     </li>
                     <!-- menu item todo-->
@@ -121,7 +120,8 @@
                     <!-- menu item table -->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#table">
-                            <div class="pull-left"><i class="ti-layout-tab-window"></i><span class="right-nav-text">data
+                            <div class="pull-left"><i class="ti-layout-tab-window"></i><span
+                                    class="right-nav-text">data
                                     table</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -195,7 +195,8 @@
                                 </a>
                                 <ul id="auth" class="collapse">
                                     <li>
-                                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#login">Level
+                                        <a href="javascript:void(0);" data-toggle="collapse"
+                                            data-target="#login">Level
                                             item 1.1<div class="pull-right"><i class="ti-plus"></i></div>
                                             <div class="clearfix"></div>
                                         </a>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GradeController;
+use App\Http\Controllers\ClassroomController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
@@ -25,6 +26,7 @@ Route::group(
         Route::get('/', function () {
             return view('dashboard');
         });
-        Route::resource('/grades', GradeController::class)->except('edit');
+        Route::resource('/grades', GradeController::class)->except(['edit', 'create']);
+        Route::resource('/classrooms', ClassroomController::class)->except(['edit', 'create']);
     }
 );
